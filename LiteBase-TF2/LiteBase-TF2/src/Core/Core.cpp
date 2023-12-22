@@ -69,7 +69,7 @@ void CCore::Load()
 		I::ClientModeShared = **reinterpret_cast<CClientModeShared ***>(g_Pattern.Find(L"client.dll", L"8B 0D ? ? ? ? 8B 02 D9 05") + 0x2);
 		I::MaterialSystem = reinterpret_cast<IMaterialSystem *>(g_Interface.Get(L"materialsystem.dll", "VMaterialSystem081"));
 		I::ModelRender = reinterpret_cast<IVModelRender *>(g_Interface.Get(L"engine.dll", "VEngineModel016"));
-		I::EngineVGui = reinterpret_cast<IEngineVGui *>(g_Interface.Get(L"engine.dll", "VEngineVGui001"));
+		I::EngineVGui = reinterpret_cast<IEngineVGui *>(g_Interface.Get(L"engine.dll", "VEngineVGui002"));
 		I::RenderView = reinterpret_cast<IVRenderView *>(g_Interface.Get(L"engine.dll", "VEngineRenderView014"));
 		I::PlayerInfoManager = reinterpret_cast<IPlayerInfoManager *>(g_Interface.Get(L"server.dll", "PlayerInfoManager002"));
 		I::GlobalVars = *reinterpret_cast<CGlobalVarsBase **>(g_Pattern.Find(L"engine.dll", L"A1 ? ? ? ? 8B 11 68") + 0x8);
