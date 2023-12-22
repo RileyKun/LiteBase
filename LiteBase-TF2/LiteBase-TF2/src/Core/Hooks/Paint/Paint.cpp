@@ -22,6 +22,6 @@ void __fastcall Hooks::Paint::Func(void *ecx, void *edx, int mode)
 
 void Hooks::Paint::Init()
 {
-	fn FN = reinterpret_cast<fn>(Utils::GetVFuncPtr(I::EngineVGui, 13));
+	fn FN = reinterpret_cast<fn>(Utils::GetVFuncPtr(I::EngineVGui, 14));
 	Hook.Create(FN, Func);
 }
